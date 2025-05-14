@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: rhopp-250514a
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: registry.redhat.io/ubi9/httpd-24:latest
-        name: container-image  
+        - image: rhtap-quay-quay-tssc-quay.apps.rhopp250514.devcluster.openshift.com/rhtap/rhopp-250514a:9208ee7e1ccea7c7c7e2be7f1c691d83584e1177@sha256:0068736517522e6390054c3bbb2d9230be82a074be3aaf2e5cac356d628ebbae
+          name: container-image
