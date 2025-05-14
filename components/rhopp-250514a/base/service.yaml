@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: rhopp-250514a
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: rhopp-250514a 
+  name: rhopp-250514a
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: rhopp-250514a 
